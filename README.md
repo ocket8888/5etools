@@ -1,19 +1,12 @@
 ## 5e Tools
-[Go to 5etools](5etools.html)
-
-[Join the 5etools Discord here!](https://discord.gg/Zk34CUZ)
+I'm trying to overhaul 5etools.com to not use node.js
+*node.js bad*
 
 ## Running 5etools Locally (Offline Copy)
 There are several options for running a local/offline copy of 5etools, including:
 
 **Beginner:** Use Firefox to open the files.
 
-**Intermediate:** When using Chrome (or similar), a command-line switch is required to load some pages locally. On Windows, this can be accomplished by creating a Chrome shortcut and editing the properties of the shortcut to add `--allow-file-access-from-files` to the shortcut `Target`:
-
-![Chrome tutorial](https://raw.githubusercontent.com/TheGiddyLimit/TheGiddyLimit.github.io/master/chrome-tutorial.png "Chrome tutorial")
-
-Be sure to close any running Chrome instances (and kill any remaining Chrome processes as required) before opening the shortcut. A summary of the security implications can be found [here](https://superuser.com/a/873527).
- 
 **Advanced:** Host the project locally on a dev webserver, perhaps using [this](https://github.com/cortesi/devd).
 
 ## How to import 5etools beasts/spells/items into Roll20
@@ -60,25 +53,6 @@ Replace: $1$3
 - Adjectives: a hyphen and the full name of the unit of measure should be used, e.g. dragon exhales acid in a 60-foot line
 - Nouns: a space and the short name of the unit of measure (including the trailing period) should be used, e.g. blindsight 60 ft., darkvision 120 ft.
 - Time: a slash, /, with no spaces on either side followed by the capitalised unit of time, e.g. 2/Turn, 3/Day
-
-### Dev Server
-
-Do `npm run dev-server` to launch a local dev server that serves the project files on [`http://localhost:8080/5etools.html`](http://localhost:8080/5etools.html).
-
-The server automatically refreshes the page for you whenever one of the project files (html, css, js, images) changes.
-
-### Version bump
-
-Do `npm run version-bump -- [OPTION]`, where `[OPTION]` is one of the following:
-
-- `major` to increment the major version (`1.2.3` will become `2.0.0`)
-- `minor` to increment the minor version (`1.2.3` will become `1.3.0`)
-- `patch` to increment the patch version (`1.2.3` will become `1.2.4`)
-- a version number (like `1.2.3`)
-
-It will first run the tests and fail to increase the version if the tests fail.  
-It will then automatically replace the version in the files where it needs to be replaced, create a commit with the message `chore(version): bump` and create a tag (in the form `v1.2.3`) at the commit.  
-This feature can be easily disabled by doing `npm config set git-tag-version false`. 
 
 ## License
 
