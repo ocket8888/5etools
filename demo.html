@@ -15,8 +15,8 @@
 
 	<script type="text/javascript" src="lib/js-cookie.js"></script>
 	<script type="text/javascript" src="js/styleswitch.js"></script>
-	<script type="text/javascript" src="js/navigation.js"></script>
-	<style>
+<!-- 	<script type="text/javascript" src="js/navigation.js"></script>
+ -->	<style>
 		#jsoninput {
 			width: 100%;
 			height: 100%;
@@ -38,7 +38,145 @@
 </header>
 <nav class="container" id="navigation">
 	<ul class="nav nav-pills" id="navbar">
-	</ul>
+
+				<li role="presentation" id="home" data-page="5etools.html" class="active">
+					<a href="5etools.html">Home</a>
+				</li>
+			<li id="rules" role="presentation" class="dropdown"><a id="ruleOption" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rules <span class="caret"></span></a><ul id="ul_rules" class="dropdown-menu">
+				<li role="presentation" id="quickreference" data-page="quickreference.html">
+					<a href="quickreference.html">Quick Reference</a>
+				</li>
+
+				<li role="presentation" id="variantrules" data-page="variantrules.html">
+					<a href="variantrules.html">Variant Rules</a>
+				</li>
+			<li role="presentation" class="divider"></li>
+				<li role="presentation" id="dungeonmaster'sguide" data-page="book.html#dmg">
+					<a href="book.html#dmg">Dungeon Master's Guide</a>
+				</li>
+
+				<li role="presentation" id="monstermanual" data-page="book.html#mm">
+					<a href="book.html#mm">Monster Manual</a>
+				</li>
+
+				<li role="presentation" id="player'shandbook" data-page="book.html#phb">
+					<a href="book.html#phb">Player's Handbook</a>
+				</li>
+			</ul></li><li id="players" role="presentation" class="dropdown"><a id="playerOption" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Player Options <span class="caret"></span></a><ul id="ul_players" class="dropdown-menu">
+				<li role="presentation" id="classes" data-page="classes.html">
+					<a href="classes.html">Classes</a>
+				</li>
+
+				<li role="presentation" id="backgrounds" data-page="backgrounds.html">
+					<a href="backgrounds.html">Backgrounds</a>
+				</li>
+
+				<li role="presentation" id="feats" data-page="feats.html">
+					<a href="feats.html">Feats</a>
+				</li>
+
+				<li role="presentation" id="invocations" data-page="invocations.html">
+					<a href="invocations.html">Invocations</a>
+				</li>
+
+				<li role="presentation" id="races" data-page="races.html">
+					<a href="races.html">Races</a>
+				</li>
+
+				<li role="presentation" id="thisisyourlife" data-page="lifegen.html">
+					<a href="lifegen.html">This Is Your Life</a>
+				</li>
+
+				<li role="presentation" id="names" data-page="names.html">
+					<a href="names.html">Names</a>
+				</li>
+			</ul></li><li id="dms" role="presentation" class="dropdown"><a id="dmOption" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">DM Tools <span class="caret"></span></a><ul id="ul_dms" class="dropdown-menu">
+				<li role="presentation" id="adventures" data-page="adventures.html">
+					<a href="adventures.html">Adventures</a>
+				</li>
+
+				<li role="presentation" id="crcalculator" data-page="crcalculator.html">
+					<a href="crcalculator.html">CR Calculator</a>
+				</li>
+
+				<li role="presentation" id="cults&amp;demonicboons" data-page="cultsboons.html">
+					<a href="cultsboons.html">Cults &amp; Demonic Boons</a>
+				</li>
+
+			<li role="presentation">
+				<a href="https://kobold.club" target="_blank" title="We could literally never build something better than Kobold Fight Club" class="dropdown-ext-link">
+					<span>Encounter Builder</span>
+					<span class="glyphicon glyphicon-log-out"></span>
+				</a>
+			</li>
+
+				<li role="presentation" id="encountergenerator" data-page="encountergen.html">
+					<a href="encountergen.html">Encounter Generator</a>
+				</li>
+
+				<li role="presentation" id="lootgenerator" data-page="lootgen.html">
+					<a href="lootgen.html">Loot Generator</a>
+				</li>
+
+				<li role="presentation" id="objects" data-page="objects.html">
+					<a href="objects.html">Objects</a>
+				</li>
+
+				<li role="presentation" id="traps&amp;hazards" data-page="trapshazards.html">
+					<a href="trapshazards.html">Traps &amp; Hazards</a>
+				</li>
+			</ul></li><li id="references" role="presentation" class="dropdown"><a id="references" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">References <span class="caret"></span></a><ul id="ul_references" class="dropdown-menu">
+				<li role="presentation" id="bestiary" data-page="bestiary.html">
+					<a href="bestiary.html">Bestiary</a>
+				</li>
+
+				<li role="presentation" id="conditions" data-page="conditions.html">
+					<a href="conditions.html">Conditions</a>
+				</li>
+
+				<li role="presentation" id="deities" data-page="deities.html">
+					<a href="deities.html">Deities</a>
+				</li>
+
+				<li role="presentation" id="items" data-page="items.html">
+					<a href="items.html">Items</a>
+				</li>
+
+				<li role="presentation" id="otherrewards" data-page="rewards.html">
+					<a href="rewards.html">Other Rewards</a>
+				</li>
+
+				<li role="presentation" id="psionics" data-page="psionics.html">
+					<a href="psionics.html">Psionics</a>
+				</li>
+
+				<li role="presentation" id="spells" data-page="spells.html">
+					<a href="spells.html">Spells</a>
+				</li>
+			</ul></li>
+				<li role="presentation" id="statgen" data-page="statgen.html">
+					<a href="statgen.html">Statgen</a>
+				</li>
+			<li id="utils" role="presentation" class="dropdown"><a id="utils" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Utilities <span class="caret"></span></a><ul id="ul_utils" class="dropdown-menu">
+				<li role="presentation" id="statblocktojson" data-page="converter.html">
+					<a href="converter.html">Stat Block to JSON</a>
+				</li>
+
+				<li role="presentation" id="rendererdemo" data-page="demo.html">
+					<a href="demo.html">Renderer Demo</a>
+				</li>
+
+				<li role="presentation" id="roll20scripthelp" data-page="roll20.html">
+					<a href="roll20.html">Roll20 Script Help</a>
+				</li>
+			</ul></li><li id="daynightMode" role="presentation"><a href="#" class="nightModeToggle" id="nightmodeButton" onclick="switchModes()">Night Mode</a></li>
+			<div class="input-group" id="wrp-omnisearch-input">
+				<input id="omnisearch-input" class="form-control" placeholder="Search everywhere..." title="Disclaimer: unlikely to search everywhere. Use with caution.">
+				<div class="input-group-btn">
+					<button class="btn btn-default" id="omnisearch-submit"><span class="glyphicon glyphicon-search"></span></button>
+				</div>
+			</div>
+		</ul><div id="omnisearch-output-wrapper" style="display: none;"><div id="omnisearch-output" class=""></div></div>
 </nav>
 
 <div class="view-col-wrapper">
