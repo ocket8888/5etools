@@ -1,69 +1,40 @@
-"use strict";
+var NightMode = false;
+var allElements;
+var nightmodeButton;
 
-class StyleSwitcher {
-	constructor () {
-		this.currentStylesheet = this.STYLE_DAY;
-		this.loadStyleFromCookie();
-	}
+window.onload = () => {
 
-	setActiveStyleSheet (style) {
-		const htmlClasses = document.documentElement.classList;
-		const setMethod = style === StyleSwitcher.STYLE_DAY ? htmlClasses.remove : htmlClasses.add;
-		setMethod.call(htmlClasses, StyleSwitcher.NIGHT_CLASS);
-
-		StyleSwitcher.setButtonText(style);
-
-		this.currentStylesheet = style;
-		StyleSwitcher.createCookie(this.currentStylesheet);
-	}
-
-	static setButtonText (style) {
-		const $button = StyleSwitcher.getButton();
-		if (!$button || !$button.length) {
-			return;
+	/* Check for night mode setting */
+	var cookies = document.cookie.split(";");
+	for (var i = cookies.length - 1; i >= 0; i--) {
+		if (cookies[i].split("=")[0] === "night") {
+			NightMode = cookies[i].split("=")[1] === "true";
 		}
-		$button.html(`${style === StyleSwitcher.STYLE_DAY ? "Night" : "Day"} Mode`);
-	}
+	};
 
-	getActiveStyleSheet () {
-		return this.currentStylesheet;
-	}
-
-	loadStyleFromCookie () {
-		this.cookie = StyleSwitcher.readCookie();
-		this.cookie = this.cookie ? this.cookie : StyleSwitcher.STYLE_DAY;
-		this.setActiveStyleSheet(this.cookie);
-	}
-
-	static getButton () {
-		if (!window.$) {
-			return;
-		}
-		return $(".nightModeToggle");
-	}
-
-	static createCookie (value) {
-		Cookies.set("style", value, {expires: 365});
-	}
-
-	static readCookie () {
-		return Cookies.get("style");
-	}
-
-	toggleActiveStyleSheet () {
-		const newStyle = this.currentStylesheet === StyleSwitcher.STYLE_DAY ? StyleSwitcher.STYLE_NIGHT : StyleSwitcher.STYLE_DAY;
-		this.setActiveStyleSheet(newStyle);
+	/* Record list of page elements to apply styles later */
+	allElements = document.querySelectorAll("*");
+	nightmodeButtonText = document.getElementById('nightmodeButton').childNodes[0];
+	if (NightMode) {
+		nightmodeButtonText.data = "Day Mode";
 	}
 }
 
-StyleSwitcher.STYLE_DAY = "day";
-StyleSwitcher.STYLE_NIGHT = "night";
-StyleSwitcher.NIGHT_CLASS = "night-mode";
-
-// NIGHT MODE ==========================================================================================================
-const styleSwitcher = new StyleSwitcher();
-
-window.addEventListener("unload", function () {
-	const title = styleSwitcher.getActiveStyleSheet();
-	StyleSwitcher.createCookie(title);
-});
+function switchModes (event) {
+	delete event;
+	if (NightMode) {
+		for (var i = allElements.length - 1; i >= 0; i--) {
+			allElements[i].classList.add("night");
+		}
+		document.cookie = "night=true;expires=Session;"
+		nightmodeButtonText.data = "Day Mode";
+	}
+	else {
+		for (var i = allElements.length - 1; i >= 0; i--) {
+			allElements[i].classList.remove("night");
+		}
+		document.cookie = "night=false;expires=Session;"
+		nightmodeButtonText.data = "Night Mode";
+	}
+	NightMode = !NightMode;
+}
