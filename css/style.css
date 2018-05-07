@@ -12,10 +12,10 @@
 	src: local('glyphicons-halflings-regular'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype');
 }
 
-.unselectable {
-/*	-moz-user-select: none;*/
-/*	user-select: none;*/
-}
+/*.unselectable {
+	-moz-user-select: none;
+	user-select: none;
+}*/
 
 html {
 	height: 100%;
@@ -2689,7 +2689,7 @@ header.night h1.header-tools span {
 }
 
 .text-muted.night {
-	color: darken(#bbb, 15%);
+	color: #acacac;
 }
 
 header p.lead.night {
