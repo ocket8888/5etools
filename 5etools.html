@@ -54,6 +54,50 @@
 			background-color: #337ab7;
 			text-decoration: none;
 		}
+
+		div.dropdown > ul {
+			display: none;
+		}
+
+		div.dropdown > ul > li > a {
+			text-decoration: none;
+			display: block;
+			padding: 3px 20px;
+			white-space: nowrap;
+			clear: both;
+		}
+
+		div.dropdown:hover > ul > li > a.night {
+			color: #bbb;
+		}
+
+		div.dropdown > ul > li > a.night:hover {
+			color: white;
+		}
+
+		div.dropdown:hover > ul {
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			list-style: none;
+			background-color: white;
+			padding: 0;
+			border: 1px solid rgba(0,0,0,.15);
+			border-radius: 4px
+		}
+
+		div.dropdown:hover > ul.night {
+			background-color: #232323;
+			color: #bbb;
+			color: white;
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.56);
+		}
+
+		div.dropdown > ul.night > li:hover {
+			background-color: #383838;
+		}
+
 	</style>
 </head>
 <body>
@@ -69,7 +113,7 @@
 	</div>
 	<div id="rules" role="presentation" class="dropdown">
 		<a id="ruleOption" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rules <span class="caret"></span></a>
-			<ul id="ul_rules" class="dropdown-menu">
+			<ul>
 				<li role="presentation" id="quickreference" data-page="quickreference.html">
 					<a href="quickreference.html">Quick Reference</a>
 				</li>
@@ -93,7 +137,7 @@
 	</div>
 	<div id="players" role="presentation" class="dropdown">
 		<a id="playerOption" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Player Options <span class="caret"></span></a>
-		<ul id="ul_players" class="dropdown-menu">
+		<ul>
 			<li role="presentation" id="classes" data-page="classes.html">
 				<a href="classes.html">Classes</a>
 			</li>
@@ -125,7 +169,7 @@
 	</div>
 	<div id="dms" role="presentation" class="dropdown">
 		<a id="dmOption" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">DM Tools <span class="caret"></span></a>
-		<ul id="ul_dms" class="dropdown-menu">
+		<ul>
 			<li role="presentation" id="adventures" data-page="adventures.html">
 				<a href="adventures.html">Adventures</a>
 			</li>
@@ -164,7 +208,7 @@
 	</div>
 	<div id="references" role="presentation" class="dropdown">
 		<a id="references" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">References <span class="caret"></span></a>
-		<ul id="ul_references" class="dropdown-menu">
+		<ul>
 			<li role="presentation" id="bestiary" data-page="bestiary.html">
 				<a href="bestiary.html">Bestiary</a>
 			</li>
@@ -199,7 +243,7 @@
 	</div>
 	<div id="utils" role="presentation" class="dropdown">
 		<a id="utils" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Utilities <span class="caret"></span></a>
-			<ul id="ul_utils" class="dropdown-menu">
+			<ul>
 				<li role="presentation" id="statblocktojson" data-page="converter.html">
 					<a href="converter.html">Stat Block to JSON</a>
 				</li>
