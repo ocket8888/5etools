@@ -9,7 +9,6 @@
 
 	<title>SP 5etools</title>
 
-	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="favicon.png">
 
@@ -55,6 +54,10 @@
 			text-decoration: none;
 		}
 
+		div.dropdown {
+			position: relative;
+		}
+
 		div.dropdown > ul {
 			display: none;
 		}
@@ -65,6 +68,7 @@
 			padding: 3px 20px;
 			white-space: nowrap;
 			clear: both;
+			color: inherit;
 		}
 
 		div.dropdown:hover > ul > li > a.night {
@@ -94,279 +98,289 @@
 			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.56);
 		}
 
-		div.dropdown > ul.night > li:hover {
+		div.dropdown > ul > li.night:hover {
 			background-color: #383838;
+		}
+
+		div.dropdown > ul > li:hover {
+			background-color: #bbb;
+			color: white;
+		}
+
+		a {
+			color: #337ab7;
+			text-decoration: none;
 		}
 
 	</style>
 </head>
 <body>
-<header class="hidden-xs hidden-sm">
-	<div class="container">
+<header>
+	<div style="min-width: 750px; max-width: 1170px; margin:auto; width:80vw; padding: 0 15px;">
 		<h1 class="header-tools">5e<span>tools</span></h1>
 		<p>A suite of tools for 5e D&amp;D players.</p>
 	</div>
 </header>
 <nav style="min-width: 750px;max-width: 1170px;width: 80vw;margin: auto;position: relative;">
-	<div role="presentation" id="home" data-page="5etools.html" class="active">
+	<div class="active">
 		<a href="5etools.html">Home</a>
 	</div>
-	<div id="rules" role="presentation" class="dropdown">
-		<a id="ruleOption" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Rules <span class="caret"></span></a>
+	<div class="dropdown">
+		<a href="quickreference.html" role="button">Rules <span class="caret"></span></a>
 			<ul>
-				<li role="presentation" id="quickreference" data-page="quickreference.html">
+				<li>
 					<a href="quickreference.html">Quick Reference</a>
 				</li>
 
-				<li role="presentation" id="variantrules" data-page="variantrules.html">
+				<li>
 					<a href="variantrules.html">Variant Rules</a>
 				</li>
-				<li role="presentation" class="divider"></li>
-				<li role="presentation" id="dungeonmaster'sguide" data-page="book.html#dmg">
+				<li class="divider"></li>
+				<li>
 					<a href="book.html#dmg">Dungeon Master's Guide</a>
 				</li>
 
-				<li role="presentation" id="monstermanual" data-page="book.html#mm">
+				<li>
 					<a href="book.html#mm">Monster Manual</a>
 				</li>
 
-				<li role="presentation" id="player'shandbook" data-page="book.html#phb">
+				<li>
 					<a href="book.html#phb">Player's Handbook</a>
 				</li>
 			</ul>
 	</div>
-	<div id="players" role="presentation" class="dropdown">
-		<a id="playerOption" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Player Options <span class="caret"></span></a>
+	<div class="dropdown">
+		<a href="classes.html">Player Options <span class="caret"></span></a>
 		<ul>
-			<li role="presentation" id="classes" data-page="classes.html">
+			<li>
 				<a href="classes.html">Classes</a>
 			</li>
 
-			<li role="presentation" id="backgrounds" data-page="backgrounds.html">
+			<li>
 				<a href="backgrounds.html">Backgrounds</a>
 			</li>
 
-			<li role="presentation" id="feats" data-page="feats.html">
+			<li>
 				<a href="feats.html">Feats</a>
 			</li>
 
-			<li role="presentation" id="invocations" data-page="invocations.html">
+			<li>
 				<a href="invocations.html">Invocations</a>
 			</li>
 
-			<li role="presentation" id="races" data-page="races.html">
+			<li>
 				<a href="races.html">Races</a>
 			</li>
 
-			<li role="presentation" id="thisisyourlife" data-page="lifegen.html">
+			<li>
 				<a href="lifegen.html">This Is Your Life</a>
 			</li>
 
-			<li role="presentation" id="names" data-page="names.html">
+			<li>
 				<a href="names.html">Names</a>
 			</li>
 		</ul>
 	</div>
-	<div id="dms" role="presentation" class="dropdown">
-		<a id="dmOption" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">DM Tools <span class="caret"></span></a>
+	<div class="dropdown">
+		<a href="adventures.html">DM Tools <span class="caret"></span></a>
 		<ul>
-			<li role="presentation" id="adventures" data-page="adventures.html">
+			<li>
 				<a href="adventures.html">Adventures</a>
 			</li>
 
-			<li role="presentation" id="crcalculator" data-page="crcalculator.html">
+			<li>
 				<a href="crcalculator.html">CR Calculator</a>
 			</li>
 
-			<li role="presentation" id="cults&amp;demonicboons" data-page="cultsboons.html">
+			<li>
 				<a href="cultsboons.html">Cults &amp; Demonic Boons</a>
 			</li>
 
-			<li role="presentation">
+			<li>
 				<a href="https://kobold.club" target="_blank" title="We could literally never build something better than Kobold Fight Club" class="dropdown-ext-link">
 					<span>Encounter Builder</span>
 					<span class="glyphicon glyphicon-log-out"></span>
 				</a>
 			</li>
 
-			<li role="presentation" id="encountergenerator" data-page="encountergen.html">
+			<li>
 				<a href="encountergen.html">Encounter Generator</a>
 			</li>
 
-			<li role="presentation" id="lootgenerator" data-page="lootgen.html">
+			<li>
 				<a href="lootgen.html">Loot Generator</a>
 			</li>
 
-			<li role="presentation" id="objects" data-page="objects.html">
+			<li>
 				<a href="objects.html">Objects</a>
 			</li>
 
-			<li role="presentation" id="traps&amp;hazards" data-page="trapshazards.html">
+			<li>
 				<a href="trapshazards.html">Traps &amp; Hazards</a>
 			</li>
 		</ul>
 	</div>
-	<div id="references" role="presentation" class="dropdown">
-		<a id="references" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">References <span class="caret"></span></a>
+	<div class="dropdown">
+		<a href="spells.html">References <span class="caret"></span></a>
 		<ul>
-			<li role="presentation" id="bestiary" data-page="bestiary.html">
+			<li>
 				<a href="bestiary.html">Bestiary</a>
 			</li>
 
-			<li role="presentation" id="conditions" data-page="conditions.html">
+			<li>
 				<a href="conditions.html">Conditions</a>
 			</li>
 
-			<li role="presentation" id="deities" data-page="deities.html">
+			<li>
 				<a href="deities.html">Deities</a>
 			</li>
 
-			<li role="presentation" id="items" data-page="items.html">
+			<li>
 				<a href="items.html">Items</a>
 			</li>
 
-			<li role="presentation" id="otherrewards" data-page="rewards.html">
+			<li>
 				<a href="rewards.html">Other Rewards</a>
 			</li>
 
-			<li role="presentation" id="psionics" data-page="psionics.html">
+			<li>
 				<a href="psionics.html">Psionics</a>
 			</li>
 
-			<li role="presentation" id="spells" data-page="spells.html">
+			<li>
 				<a href="spells.html">Spells</a>
 			</li>
 		</ul>
 	</div>
-	<div role="presentation" id="statgen" data-page="statgen.html">
+	<div>
 		<a href="statgen.html">Statgen</a>
 	</div>
-	<div id="utils" role="presentation" class="dropdown">
-		<a id="utils" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Utilities <span class="caret"></span></a>
+	<div class="dropdown">
+		<a href="#" >Utilities <span class="caret"></span></a>
 			<ul>
-				<li role="presentation" id="statblocktojson" data-page="converter.html">
+				<li>
 					<a href="converter.html">Stat Block to JSON</a>
 				</li>
 
-				<li role="presentation" id="rendererdemo" data-page="demo.html">
+				<li>
 					<a href="demo.html">Renderer Demo</a>
 				</li>
 
-				<li role="presentation" id="roll20scripthelp" data-page="roll20.html">
+				<li>
 					<a href="roll20.html">Roll20 Script Help</a>
 				</li>
 			</ul>
 	</div>
-	<div id="daynightMode" role="presentation">
-		<a href="#" class="nightModeToggle" id="nightmodeButton" onclick="switchModes()">Day Mode</a>
+	<div>
+		<a href="#" id="nightmodeButton" onclick="switchModes()">Day Mode</a>
 	</div>
 	<div style="flex: 4;">
-		<input id="omnisearch-input" placeholder="Search everywhere..." title="Disclaimer: unlikely to search everywhere. Use with caution." style="float: left;padding: 6px 12px;font: inherit;border: 1px solid #ccc; border-radius: 4px 0 0 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;">
+		<input id="omnisearch-input" placeholder="Search everywhere..." title="Disclaimer: unlikely to search everywhere. Use with caution. NOT IMPLEMENTED" style="float: left;padding: 6px 12px;font: inherit;border: 1px solid #ccc; border-radius: 4px 0 0 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;">
 		<button id="omnisearch-submit" style="border: 1px solid #ccc;border-radius: 0 4px 4px 0;border-left-width: 0; display:inline-block; padding: 6px 12px; text-align: center; vertical-align: middle; background-color: white">
-			<span class="glyphicon glyphicon-search"></span>
+			<span class="searchIcon"></span>
 		</button>
 	</div>
 	<div id="omnisearch-output-wrapper" style="display: none;"><div id="omnisearch-output" class=""></div></div>
 </nav>
-<main style="min-width: 750px;max-width: 1170px;width: 80vw;padding: 15px;margin: auto;">
+<main style="min-width: 750px;max-width: 1170px;width: 80vw;margin: auto;">
 
 	<p>5etools is a suite of browser-based tools for players and DMs of D&amp;D 5e. You can	download the entire project from <a href="https://get.5e.tools">get.5e.tools</a>. To run a local (offline) copy, <span class="not-simple" title="For Firefox, this works. For Chrome/derivatives, you need to use '--allow-file-access-from-files' (Google it.)">simply</span> download the project, extract it all to a folder, and open the html files in a browser. You're free to host your own mirror, or contribute to the project via <a href="https://github.com/TheGiddyLimit/TheGiddyLimit.github.io">GitHub</a>.</p>
 
 	<p>The above message is from the original creators of this site, and we've left it there for posterity. This version of 5eTools is built and maintained by Superphage, and you can get it from <a href="https://github.com/ocket8888/5eTools">here</a>. Note, however, that this is still in active development, and is not guaranteed to be stable, or even work.</p>
 
-	<div style="display: grid;grid-template-columns: 1fr 1fr;grid-column-gap: 10%;">
+	<div style="display: grid;grid-template-columns: 1fr 1fr;grid-column-gap: 10%; grid-row-gap: 15px;">
 		<div>
-			<h4><a href="classes.html">Classes</a></h4>
+			<h2><a href="classes.html">Classes</a></h2>
 			<p>Classes.html allows you to quickly browse each of the official classes in 5e. You can also filter for the class' specific subclasses for easier reference, sharing the produced URL for quick-access.</p>
 		</div>
 
 		<div>
-			<h4><a href="bestiary.html">Bestiary</a></h4>
+			<h2><a href="bestiary.html">Bestiary</a></h2>
 			<p>Bestiary.html provides a searchable, filterable list of the more than 1,000 stat blocks in D&amp;D 5e. You can display them and each attack and damage roll can be done in-line with just a click.</p>
 		</div>
 
 		<div>
-			<h4><a href="backgrounds.html">Backgrounds</a></h4>
+			<h2><a href="backgrounds.html">Backgrounds</a></h2>
 			<p>Backgrounds.html lists the official backgrounds in D&amp;D 5e, including those from supplement material.</p>
 		</div>
 
 		<div>
-			<h4><a href="conditions.html">Conditions</a></h4>
+			<h2><a href="conditions.html">Conditions</a></h2>
 			<p>Conditions.html lists all the conditions in D&amp;D 5e.</p>
 		</div>
 
 		<div>
-			<h4><a href="feats.html">Feats</a></h4>
+			<h2><a href="feats.html">Feats</a></h2>
 			<p>Feats.html provides a quick-use list of the feats in D&amp;D 5e, including those from Unearthed Arcana and supplements.</p>
 		</div>
 
 		<div>
-			<h4><a href="cultsboons.html">Cults &amp; Demonic Boons</a>/<a href="deities.html">Deities</a></h4>
+			<h2><a href="cultsboons.html">Cults &amp; Demonic Boons</a>/<a href="deities.html">Deities</a></h2>
 			<p>Cultsboons.html lists all cults and demonic boons in the UA: Fiendish Options. Deities.html lists all the gods in D&amp;D 5e.</p>
 		</div>
 
 		<div>
-			<h4><a href="races.html">Races</a></h4>
+			<h2><a href="races.html">Races</a></h2>
 			<p>Races.html lists each of the races in D&amp;D 5e, including subraces and variants.</p>
 		</div>
 
 		<div>
-			<h4><a href="items.html">Items</a></h4>
+			<h2><a href="items.html">Items</a></h2>
 			<p>Items.html lists the mundane and magical items currently in D&amp;D 5e, allowing quick access to their properties.</p>
 		</div>
 
 		<div>
-			<h4><a href="names.html">Names</a></h4>
+			<h2><a href="names.html">Names</a></h2>
 			<p>Names.html lists a name roller for each of the races in D&amp;D 5e.</p>
 		</div>
 
 		<div>
-			<h4><a href="rewards.html">Other Rewards</a></h4>
+			<h2><a href="rewards.html">Other Rewards</a></h2>
 			<p>Rewards.html lists the blessings, boons, and charms currently in D&amp;D 5e, allowing quick access to their properties.</p>
 		</div>
 
 		<div>
-			<h4><a href="lifegen.html">This Is Your Life</a></h4>
+			<h2><a href="lifegen.html">This Is Your Life</a></h2>
 			<p>Lifegen.html provides an automated version of the character background generator from <i>Xanathar's Guide to Everything</i>.</p>
 		</div>
 
 		<div>
-			<h4><a href="spells.html">Spells</a>/<a href="psionics.html">Psionics</a></h4>
+			<h2><a href="spells.html">Spells</a>/<a href="psionics.html">Psionics</a></h2>
 			<p>Spells.html lists all of the official spells in D&amp;D 5e. Psionics.html lists all psionics in the UA: The Mystic Class. Both lists can be easily searched and filtered and the entries can be shared through the generated URL.</p>
 		</div>
 
 		<div>
-			<h4><a href="crcalculator.html">CR Calculator</a></h4>
+			<h2><a href="crcalculator.html">CR Calculator</a></h2>
 			<p>CRcalculator.html provides a verbose, in-depth Challenge Rating calculator, for determining the CR of custom monsters made for D&amp;D 5e.</p>
 		</div>
 
 		<div>
-			<h4><a href="quickreference.html">Quick Reference</a></h4>
+			<h2><a href="quickreference.html">Quick Reference</a></h2>
 			<p>Quickreference.html provides a searchable selection of commonly used rules and tables.</p>
 		</div>
 
 		<div>
-			<h4><a href="lootgen.html">Loot Generator</a></h4>
+			<h2><a href="lootgen.html">Loot Generator</a></h2>
 			<p>Lootgen.html is a random loot generator for both individual and hoard treasure based on CR for D&amp;D 5e.</p>
 		</div>
 
 		<div>
-			<h4><a href="variantrules.html">Variant Rules</a></h4>
+			<h2><a href="variantrules.html">Variant Rules</a></h2>
 			<p>Variantrules.html lists the variant and optional rules in D&amp;D 5e.</p>
 		</div>
 
 		<div>
-			<h4><a href="adventures.html">Adventures</a></h4>
+			<h2><a href="adventures.html">Adventures</a></h2>
 			<p>Adventures.html is a work-in-progress list of officially released adventures for D&amp;D 5e.</p>
 		</div>
 
 		<div>
-			<h4><a href="invocations.html">Eldritch Invocations</a></h4>
+			<h2><a href="invocations.html">Eldritch Invocations</a></h2>
 			<p>Invocations.html lists all of the official Eldritch Invocations for the Warlock Class in D&amp;D 5e, from the PHB, XGE, and various UA. Filterable by prerequisites, and entries can be shared through the generated URL.</p>
 		</div>
 	</div>
 <div>
-		<div class="col-sm-12">
+		<div>
 			<h3>Use Roll20?</h3>
 			<p>Get Tampermonkey (<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Chrome</a>/<a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Firefox</a>), and install the 5etools companion script using
 				this <a href="https://get.5e.tools/script/betteR20-5etools.user.js">link</a>! This
@@ -381,16 +395,10 @@
 			<p><b>FAQ: Check the <a href="roll20.html">Help page</a> for some basic pointers on how to use the script.</b></p>
 		</div>
 	</div></main>
-<footer class="container">
+<footer style="min-width: 750px;max-width: 1170px;width: 80vw;margin: auto;">
 	<p class="text-align-center">
-		Version 1.40.7 | <span style="text-decoration: red line-through">&nbsp;&copy;&nbsp;</span>2018 5etools
+		Version 1.0 | <span style="text-decoration: red line-through">&nbsp;&copy;&nbsp;</span>2018 SuperPhage
 	</p>
-</footer>    <!--5ETOOLS_SCRIPT_ANCHOR-->
-<script type="text/javascript" src="js/utils.js"></script>
-<!-- <script type="text/javascript" src="js/omnisearch.js"></script>
- --><script type="text/javascript" src="js/entryrender.js"></script>
-<script type="text/javascript" src="lib/jquery.js"></script>
-<script type="text/javascript" src="lib/bootstrap.js"></script>
-<script type="text/javascript" src="lib/elasticlunr.js"></script>
+</footer>
 </body>
 </html>

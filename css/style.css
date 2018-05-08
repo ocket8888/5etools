@@ -16,6 +16,9 @@
 	-moz-user-select: none;
 	user-select: none;
 }*/
+* {
+	box-sizing: border-box;
+}
 
 html {
 	height: 100%;
@@ -23,11 +26,56 @@ html {
 
 body {
 	min-height: 100%;
+	font-family: "Helvetica Neue",Helvetica,Arial,"Scala Sans",sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+	margin: 5px 0;
+}
+
+ul {
+	margin-top: 0;
+}
+
+p {
+	margin: 5px 0;
 }
 
 header {
 	margin-bottom: 2px;
 	padding: 2px 15px;
+}
+
+input {
+	color: inherit;
+	margin: 0;
+}
+
+span.caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-top: 4px dashed;
+	border-top: 4px solid;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+
+span.searchIcon {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+}
+
+span.searchIcon::before {
+	content: "\e003";
 }
 
 header h1 {
