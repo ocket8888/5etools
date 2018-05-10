@@ -15,14 +15,6 @@
 	<script type="text/javascript" src="js/styleswitch.js"></script>
 
 	<style>
-		table.home-table {
-			padding: 0 10px 10px;
-		}
-
-		table.home-table td {
-			vertical-align: top;
-			padding: 0 5px;
-		}
 
 		span.not-simple {
 			cursor: help;
@@ -112,17 +104,25 @@
 			text-decoration: none;
 		}
 
+		.container {
+			width: 80vw;
+			min-width: 750px;
+			max-width: 1170px;
+			margin: auto;
+			padding: 0 15px;
+		}
+
 	</style>
 </head>
 <body>
 <header>
-	<div style="min-width: 750px; max-width: 1170px; margin:auto; width:80vw; padding: 0 15px;">
+	<div class="container">
 		<h1 class="header-tools">5e<span>tools</span></h1>
 		<p>A suite of tools for 5e D&amp;D players.</p>
 	</div>
 </header>
-<nav style="min-width: 750px;max-width: 1170px;width: 80vw;margin: auto;position: relative;">
-	<div class="active">
+<nav class="container">
+	<div>
 		<a href="5etools.html">Home</a>
 	</div>
 	<div class="dropdown">
@@ -275,20 +275,22 @@
 		<a href="#" id="nightmodeButton" onclick="switchModes()">Day Mode</a>
 	</div>
 	<div style="flex: 4;">
-		<input id="omnisearch-input" placeholder="Search everywhere..." title="Disclaimer: unlikely to search everywhere. Use with caution. NOT IMPLEMENTED" style="float: left;padding: 6px 12px;font: inherit;border: 1px solid #ccc; border-radius: 4px 0 0 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;">
-		<button id="omnisearch-submit" style="border: 1px solid #ccc;border-radius: 0 4px 4px 0;border-left-width: 0; display:inline-block; padding: 6px 12px; text-align: center; vertical-align: middle; background-color: white">
-			<span class="searchIcon"></span>
+		<input id="omnisearch-input" placeholder="Search everywhere..." title="Disclaimer: unlikely to search everywhere. Use with caution. NOT IMPLEMENTED">
+		<button id="omnisearch-submit">
+			<span></span>
 		</button>
 	</div>
-	<div id="omnisearch-output-wrapper" style="display: none;"><div id="omnisearch-output" class=""></div></div>
+	<div id="omnisearch-output-wrapper" style="display: none;">
+		<div id="omnisearch-output"></div>
+	</div>
 </nav>
-<main style="min-width: 750px;max-width: 1170px;width: 80vw;margin: auto;">
+<main class="container">
 
 	<p>5etools is a suite of browser-based tools for players and DMs of D&amp;D 5e. You can	download the entire project from <a href="https://get.5e.tools">get.5e.tools</a>. To run a local (offline) copy, <span class="not-simple" title="For Firefox, this works. For Chrome/derivatives, you need to use '--allow-file-access-from-files' (Google it.)">simply</span> download the project, extract it all to a folder, and open the html files in a browser. You're free to host your own mirror, or contribute to the project via <a href="https://github.com/TheGiddyLimit/TheGiddyLimit.github.io">GitHub</a>.</p>
 
 	<p>The above message is from the original creators of this site, and we've left it there for posterity. This version of 5eTools is built and maintained by Superphage, and you can get it from <a href="https://github.com/ocket8888/5eTools">here</a>. Note, however, that this is still in active development, and is not guaranteed to be stable, or even work.</p>
 
-	<div style="display: grid;grid-template-columns: 1fr 1fr;grid-column-gap: 10%; grid-row-gap: 15px;">
+	<div id="links">
 		<div>
 			<h2><a href="classes.html">Classes</a></h2>
 			<p>Classes.html allows you to quickly browse each of the official classes in 5e. You can also filter for the class' specific subclasses for easier reference, sharing the produced URL for quick-access.</p>
@@ -379,7 +381,7 @@
 			<p>Invocations.html lists all of the official Eldritch Invocations for the Warlock Class in D&amp;D 5e, from the PHB, XGE, and various UA. Filterable by prerequisites, and entries can be shared through the generated URL.</p>
 		</div>
 	</div>
-<div>
+	<div>
 		<div>
 			<h3>Use Roll20?</h3>
 			<p>Get Tampermonkey (<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Chrome</a>/<a href="https://addons.mozilla.org/firefox/addon/tampermonkey/">Firefox</a>), and install the 5etools companion script using
@@ -394,11 +396,10 @@
 			<p>Beyond importing, the script features a custom initiative tracker; the ability to add custom map/token images by URL; enhanced journal functionality; and more.</p>
 			<p><b>FAQ: Check the <a href="roll20.html">Help page</a> for some basic pointers on how to use the script.</b></p>
 		</div>
-	</div></main>
-<footer style="min-width: 750px;max-width: 1170px;width: 80vw;margin: auto;">
-	<p class="text-align-center">
+	</div>
+</main>
+<footer class="container">
 		Version 1.0 | <span style="text-decoration: red line-through">&nbsp;&copy;&nbsp;</span>2018 SuperPhage
-	</p>
 </footer>
 </body>
 </html>
