@@ -47,6 +47,9 @@ p {
 }
 
 header {
+	position: sticky;
+	top: 0;
+	z-index: 800;
 	margin-bottom: 2px;
 	padding: 2px 15px;
 }
@@ -3200,3 +3203,102 @@ table.stats div.statsBlockInsetReadaloud.night {
 }
 
 /* Night Mode End */
+
+
+
+span.not-simple {
+	cursor: help;
+	text-decoration: underline;
+	text-decoration-style: dotted;
+}
+
+nav {
+	display: flex;
+}
+
+nav > div {
+	display: inline-flex;
+	flex: auto;
+}
+
+nav > div > a {
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+	border-radius: 4px;
+}
+
+nav > div > a:hover,
+nav > div > a:focus {
+	color: white;
+	background-color: #337ab7;
+	text-decoration: none;
+}
+
+div.dropdown {
+	position: relative;
+}
+
+div.dropdown > ul {
+	display: none;
+}
+
+div.dropdown > ul > li > a {
+	text-decoration: none;
+	display: block;
+	padding: 3px 20px;
+	white-space: nowrap;
+	clear: both;
+	color: inherit;
+}
+
+div.dropdown:hover > ul > li > a.night {
+	color: #bbb;
+}
+
+div.dropdown > ul > li > a.night:hover {
+	color: white;
+}
+
+div.dropdown:hover > ul {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	list-style: none;
+	background-color: white;
+	padding: 0;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+	z-index: 900;
+}
+
+div.dropdown:hover > ul.night {
+	background-color: #232323;
+	color: #bbb;
+	color: white;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.56);
+}
+
+div.dropdown > ul > li.night:hover {
+	background-color: #383838;
+}
+
+div.dropdown > ul > li:hover {
+	background-color: #bbb;
+	color: white;
+}
+
+a {
+	color: #337ab7;
+	text-decoration: none;
+}
+
+.container {
+	width: 80vw;
+	min-width: 750px;
+	max-width: 1170px;
+	margin: auto;
+	padding: 0 15px;
+}
