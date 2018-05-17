@@ -1,0 +1,14 @@
+a > strong {
+	text-decoration: none;
+	color: black;
+}
+
+details ul {
+	list-style: none;
+}
+
+nav#sidebar {
+	position: fixed;
+	top: calc(2em + 14px);
+	left: 0;
+}
