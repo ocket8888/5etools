@@ -11,4 +11,57 @@ nav#sidebar {
 	position: fixed;
 	top: calc(2em + 14px);
 	left: 0;
+	display: block;
+}
+
+summary {
+	cursor: pointer;
+}
+
+h2, h3, h4, h5, dl > dt {
+	color: #922610;
+	font-family: 'Anada',serif;
+	font-variant: small-caps;
+	font-weight: 500;
+}
+
+table {
+	width: 100%;
+	text-align: center;
+	margin: 0 0 15px;
+}
+
+table.striped-odd tbody tr:nth-child(odd) {
+	background-color: #e0e0e0;
+}
+
+table caption {
+	font-weight: bold;
+	font-size: 1.1em;
+	margin-left: 5px;
+	text-align: left;
+	color: #777;
+}
+
+th {
+	color: #922610;
+	padding: 1px 0.3em;
+}
+
+td {
+	color: black;
+}
+
+td, th {
+	font-size: 0.9em;
+}
+
+main {
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	font-family: 'Convergence',sans-serif;
+	color: #333;
+}
+
+p {
+	margin: 0 0 15px;
 }
