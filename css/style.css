@@ -3238,11 +3238,12 @@ div.dropdown {
 	position: relative;
 }
 
-div.dropdown > ul {
+div.dropdown menu {
 	display: none;
+	margin: 0;
 }
 
-div.dropdown > ul > li > a {
+div.dropdown menu > li > a {
 	text-decoration: none;
 	display: block;
 	padding: 3px 20px;
@@ -3251,15 +3252,15 @@ div.dropdown > ul > li > a {
 	color: inherit;
 }
 
-div.dropdown:hover > ul > li > a.night {
+div.dropdown:hover li.night {
 	color: #bbb;
 }
 
-div.dropdown > ul > li > a.night:hover {
+/*div.dropdown menu > li > a.night:hover {
 	color: white;
-}
+}*/
 
-div.dropdown:hover > ul {
+div.dropdown:hover > menu {
 	display: block;
 	position: absolute;
 	top: 100%;
@@ -3272,18 +3273,18 @@ div.dropdown:hover > ul {
 	z-index: 900;
 }
 
-div.dropdown:hover > ul.night {
+div.dropdown:hover menu.night {
 	background-color: #232323;
 	color: #bbb;
 	color: white;
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.56);
 }
 
-div.dropdown > ul > li.night:hover {
+div.dropdown menu > li.night:hover {
 	background-color: #383838;
 }
 
-div.dropdown > ul > li:hover {
+div.dropdown menu > li:hover {
 	background-color: #bbb;
 	color: white;
 }
