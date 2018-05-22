@@ -12,6 +12,9 @@ nav#sidebar {
 	top: calc(2em + 14px);
 	left: 0;
 	display: block;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-left-width: 0;
 }
 
 summary {
@@ -21,8 +24,11 @@ summary {
 h2, h3, h4, h5, dl > dt {
 	color: #922610;
 	font-family: 'Anada',serif;
-	font-variant: small-caps;
 	font-weight: 500;
+}
+
+h2, h3, h4, h5 {
+	font-variant: small-caps;
 }
 
 table {
