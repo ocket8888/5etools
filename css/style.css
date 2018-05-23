@@ -2,6 +2,7 @@
 	font-family: 'Convergence';
 	font-style: normal;
 	font-weight: 400;
+	font-display: swap;
 	src: local('Convergence-Regular'), url('../fonts/Convergence-Regular.ttf') format('truetype');
 }
 
@@ -9,6 +10,7 @@
 	font-family: 'Glyphicons Halflings';
 	font-style: normal;
 	font-weight: 400;
+	font-display: swap;
 	src: local('glyphicons-halflings-regular'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype');
 }
 
