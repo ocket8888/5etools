@@ -71,3 +71,16 @@ main {
 p {
 	margin: 0 0 15px;
 }
+
+hr.section-break {
+	height: 4px;
+	color: silver;
+	background-color: silver;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	color: #922610;
+	background-color: #922610;
+}
