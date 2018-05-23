@@ -12,14 +12,6 @@
 	src: local('glyphicons-halflings-regular'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype');
 }
 
-/*.unselectable {
-	-moz-user-select: none;
-	user-select: none;
-}*/
-* {
-	box-sizing: border-box;
-}
-
 s {
 	color: red;
 }
