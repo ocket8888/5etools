@@ -21,7 +21,7 @@ summary {
 	cursor: pointer;
 }
 
-h2, h3, h4, h5, dl > dt {
+h2, h3, h4, h5, h6, dl > dt {
 	color: #922610;
 	font-family: 'Anada',serif;
 	font-weight: 500;
