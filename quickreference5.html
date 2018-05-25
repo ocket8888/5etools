@@ -8,19 +8,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="favicon.png">
 	<script type="text/javascript" src="js/styleswitch.js"></script>
-	<style type="text/css">
-		table.vehicle-table tbody td, table.vehicle-table th {
-			text-align: right;
-		}
-
-		table.vehicle-table tbody td:first-child, table.vehicle-table th:first-child {
-			text-align: left;
-		}
-
-		table#trade-goods th:first-child, table#trade-goods td:first-child {
-			text-align: right;
-		}
-	</style>
 </head>
 <body>
 
@@ -223,7 +210,7 @@
 		</ul>
 	</details>
 
-	<details open>
+	<details>
 		<summary><strong>Equipment</strong></summary>
 		<ul>
 			<li>
@@ -339,7 +326,7 @@
 		</ul>
 	</details>
 
-	<details>
+	<details open>
 		<summary><strong>Adventuring</strong></summary>
 		<ul>
 			<li>
@@ -358,120 +345,89 @@
 	</details>
 </nav>
 
-<div class="container view-col-wrapper">
-	<div class="view-col book-contents" id="listcontainer">
-		<ul class="list contents"><li class="contents-item" data-bookid="quickreference">
-				<a id="0" href="#quickreference,0" title="Quick Reference">
-					<span class="name">Quick Reference</span>
-				</a>
-				<ul class="bk-contents"><li class="">
-				<a href="#quickreference,0" onclick="BookUtil.scrollPageTop()" style="display: flex; justify-content: space-between; padding: 0px;">
-					<span class="sect">Character Creation</span>
-				<span class="showhide" onclick="BookUtil.sectToggle(event, this)" data-hidden="true">[–]</span></a>
-			</li><ul class="bk-headers"><li>
-				<a href="#quickreference,0,beyond%201st%20level" data-book="quickreference" data-chapter="0" data-header="Beyond 1st Level" onclick="BookUtil.scrollClick('Beyond 1st Level')">Beyond 1st Level</a>
-			</li><li>
-				<a href="#quickreference,0,languages" data-book="quickreference" data-chapter="0" data-header="Languages" onclick="BookUtil.scrollClick('Languages')">Languages</a>
-			</li><li>
-				<a href="#quickreference,0,multiclassing" data-book="quickreference" data-chapter="0" data-header="Multiclassing" onclick="BookUtil.scrollClick('Multiclassing')">Multiclassing</a>
-			</li><li>
-				<a href="#quickreference,0,step-by-step%20characters" data-book="quickreference" data-chapter="0" data-header="Step-by-Step Characters" onclick="BookUtil.scrollClick('Step-by-Step Characters')">Step-by-Step Characters</a>
-			</li></ul><li class="">
-				<a href="#quickreference,1" onclick="BookUtil.scrollPageTop()" style="display: flex; justify-content: space-between; padding: 0px;">
-					<span class="sect">Equipment</span>
-				<span class="showhide" onclick="BookUtil.sectToggle(event, this)" data-hidden="true">[–]</span></a>
-			</li><ul class="bk-headers"><li>
-				<a href="#quickreference,1,adventuring%20gear" data-book="quickreference" data-chapter="1" data-header="Adventuring Gear" onclick="BookUtil.scrollClick('Adventuring Gear')">Adventuring Gear</a>
-			</li><li>
-				<a href="#quickreference,1,armor%20and%20shields" data-book="quickreference" data-chapter="1" data-header="Armor and Shields" onclick="BookUtil.scrollClick('Armor and Shields')">Armor and Shields</a>
-			</li><li>
-				<a href="#quickreference,1,expenses" data-book="quickreference" data-chapter="1" data-header="Expenses" onclick="BookUtil.scrollClick('Expenses')">Expenses</a>
-			</li><li>
-				<a href="#quickreference,1,mounts%20and%20vehicles" data-book="quickreference" data-chapter="1" data-header="Mounts and Vehicles" onclick="BookUtil.scrollClick('Mounts and Vehicles')">Mounts and Vehicles</a>
-			</li><li>
-				<a href="#quickreference,1,starting%20equipment" data-book="quickreference" data-chapter="1" data-header="Starting Equipment" onclick="BookUtil.scrollClick('Starting Equipment')">Starting Equipment</a>
-			</li><li>
-				<a href="#quickreference,1,tools" data-book="quickreference" data-chapter="1" data-header="Tools" onclick="BookUtil.scrollClick('Tools')">Tools</a>
-			</li><li>
-				<a href="#quickreference,1,trade%20goods" data-book="quickreference" data-chapter="1" data-header="Trade Goods" onclick="BookUtil.scrollClick('Trade Goods')">Trade Goods</a>
-			</li><li>
-				<a href="#quickreference,1,wealth" data-book="quickreference" data-chapter="1" data-header="Wealth" onclick="BookUtil.scrollClick('Wealth')">Wealth</a>
-			</li><li>
-				<a href="#quickreference,1,weapons" data-book="quickreference" data-chapter="1" data-header="Weapons" onclick="BookUtil.scrollClick('Weapons')">Weapons</a>
-			</li></ul><li class="">
-				<a href="#quickreference,2" onclick="BookUtil.scrollPageTop()" style="display: flex; justify-content: space-between; padding: 0px;">
-					<span class="sect">Playing the Game</span>
-				<span class="showhide" onclick="BookUtil.sectToggle(event, this)" data-hidden="true">[–]</span></a>
-			</li><ul class="bk-headers"><li>
-				<a href="#quickreference,2,ability%20checks" data-book="quickreference" data-chapter="2" data-header="Ability Checks" onclick="BookUtil.scrollClick('Ability Checks')">Ability Checks</a>
-			</li><li>
-				<a href="#quickreference,2,ability%20scores%20and%20modifiers" data-book="quickreference" data-chapter="2" data-header="Ability Scores and Modifiers" onclick="BookUtil.scrollClick('Ability Scores and Modifiers')">Ability Scores and Modifiers</a>
-			</li><li>
-				<a href="#quickreference,2,advantage%20and%20disadvantage" data-book="quickreference" data-chapter="2" data-header="Advantage and Disadvantage" onclick="BookUtil.scrollClick('Advantage and Disadvantage')">Advantage and Disadvantage</a>
-			</li><li>
-				<a href="#quickreference,2,casting%20a%20spell" data-book="quickreference" data-chapter="2" data-header="Casting a Spell" onclick="BookUtil.scrollClick('Casting a Spell')">Casting a Spell</a>
-			</li><li>
-				<a href="#quickreference,2,conditions" data-book="quickreference" data-chapter="2" data-header="Conditions" onclick="BookUtil.scrollClick('Conditions')">Conditions</a>
-			</li><li>
-				<a href="#quickreference,2,falling" data-book="quickreference" data-chapter="2" data-header="Falling" onclick="BookUtil.scrollClick('Falling')">Falling</a>
-			</li><li>
-				<a href="#quickreference,2,food%20and%20water" data-book="quickreference" data-chapter="2" data-header="Food and Water" onclick="BookUtil.scrollClick('Food and Water')">Food and Water</a>
-			</li><li>
-				<a href="#quickreference,2,how%20to%20play" data-book="quickreference" data-chapter="2" data-header="How to Play" onclick="BookUtil.scrollClick('How to Play')">How to Play</a>
-			</li><li>
-				<a href="#quickreference,2,interacting%20with%20objects" data-book="quickreference" data-chapter="2" data-header="Interacting with Objects" onclick="BookUtil.scrollClick('Interacting with Objects')">Interacting with Objects</a>
-			</li><li>
-				<a href="#quickreference,2,proficiency%20bonus" data-book="quickreference" data-chapter="2" data-header="Proficiency Bonus" onclick="BookUtil.scrollClick('Proficiency Bonus')">Proficiency Bonus</a>
-			</li><li>
-				<a href="#quickreference,2,resting" data-book="quickreference" data-chapter="2" data-header="Resting" onclick="BookUtil.scrollClick('Resting')">Resting</a>
-			</li><li>
-				<a href="#quickreference,2,saving%20throws" data-book="quickreference" data-chapter="2" data-header="Saving Throws" onclick="BookUtil.scrollClick('Saving Throws')">Saving Throws</a>
-			</li><li>
-				<a href="#quickreference,2,skills" data-book="quickreference" data-chapter="2" data-header="Skills" onclick="BookUtil.scrollClick('Skills')">Skills</a>
-			</li><li>
-				<a href="#quickreference,2,suffocating" data-book="quickreference" data-chapter="2" data-header="Suffocating" onclick="BookUtil.scrollClick('Suffocating')">Suffocating</a>
-			</li><li>
-				<a href="#quickreference,2,using%20each%20ability" data-book="quickreference" data-chapter="2" data-header="Using Each Ability" onclick="BookUtil.scrollClick('Using Each Ability')">Using Each Ability</a>
-			</li><li>
-				<a href="#quickreference,2,vision%20and%20light" data-book="quickreference" data-chapter="2" data-header="Vision and Light" onclick="BookUtil.scrollClick('Vision and Light')">Vision and Light</a>
-			</li></ul><li class="">
-				<a href="#quickreference,3" onclick="BookUtil.scrollPageTop()" style="display: flex; justify-content: space-between; padding: 0px;">
-					<span class="sect">Combat</span>
-				<span class="showhide" onclick="BookUtil.sectToggle(event, this)" data-hidden="true">[–]</span></a>
-			</li><ul class="bk-headers"><li>
-				<a href="#quickreference,3,actions%20in%20combat" data-book="quickreference" data-chapter="3" data-header="Actions in Combat" onclick="BookUtil.scrollClick('Actions in Combat')">Actions in Combat</a>
-			</li><li>
-				<a href="#quickreference,3,cover" data-book="quickreference" data-chapter="3" data-header="Cover" onclick="BookUtil.scrollClick('Cover')">Cover</a>
-			</li><li>
-				<a href="#quickreference,3,damage%20and%20healing" data-book="quickreference" data-chapter="3" data-header="Damage and Healing" onclick="BookUtil.scrollClick('Damage and Healing')">Damage and Healing</a>
-			</li><li>
-				<a href="#quickreference,3,making%20an%20attack" data-book="quickreference" data-chapter="3" data-header="Making an Attack" onclick="BookUtil.scrollClick('Making an Attack')">Making an Attack</a>
-			</li><li>
-				<a href="#quickreference,3,mounted%20combat" data-book="quickreference" data-chapter="3" data-header="Mounted Combat" onclick="BookUtil.scrollClick('Mounted Combat')">Mounted Combat</a>
-			</li><li>
-				<a href="#quickreference,3,movement%20and%20positioning" data-book="quickreference" data-chapter="3" data-header="Movement and Positioning" onclick="BookUtil.scrollClick('Movement and Positioning')">Movement and Positioning</a>
-			</li><li>
-				<a href="#quickreference,3,the%20order%20of%20combat" data-book="quickreference" data-chapter="3" data-header="The Order of Combat" onclick="BookUtil.scrollClick('The Order of Combat')">The Order of Combat</a>
-			</li><li>
-				<a href="#quickreference,3,underwater%20combat" data-book="quickreference" data-chapter="3" data-header="Underwater Combat" onclick="BookUtil.scrollClick('Underwater Combat')">Underwater Combat</a>
-			</li></ul><li class="active">
-				<a href="#quickreference,4" onclick="BookUtil.scrollPageTop()" style="display: flex; justify-content: space-between; padding: 0px;">
-					<span class="sect">Adventuring</span>
-				<span class="showhide" onclick="BookUtil.sectToggle(event, this)" data-hidden="true">[–]</span></a>
-			</li><ul class="bk-headers active"><li>
-				<a href="#quickreference,4,climbing%2c%20swimming%2c%20and%20crawling" data-book="quickreference" data-chapter="4" data-header="Climbing, Swimming, and Crawling" onclick="BookUtil.scrollClick('Climbing, Swimming, and Crawling')">Climbing, Swimming, and Crawling</a>
-			</li><li>
-				<a href="#quickreference,4,difficult%20terrain" data-book="quickreference" data-chapter="4" data-header="Difficult Terrain" onclick="BookUtil.scrollClick('Difficult Terrain')">Difficult Terrain</a>
-			</li><li>
-				<a href="#quickreference,4,jumping" data-book="quickreference" data-chapter="4" data-header="Jumping" onclick="BookUtil.scrollClick('Jumping')">Jumping</a>
-			</li><li>
-				<a href="#quickreference,4,travel%20pace" data-book="quickreference" data-chapter="4" data-header="Travel Pace" onclick="BookUtil.scrollClick('Travel Pace')">Travel Pace</a>
-			</li></ul></ul>
-			</li></ul>
-	</div>
-	<div class="view-col book-view">
-		<table id="pagecontent" class="stats stats-book"><tr><th class="border" colspan="6"></th></tr><tr class="text"><td colspan="6"><div class=" statsBlockHead"><div class=" statsBlockSectionHead"><span class="entry-title" data-title-index="598">Climbing, Swimming, and Crawling</span> <p>While climbing or swimming, each foot of movement costs 1 extra foot (2 extra feet in difficult terrain), unless a creature has a climbing or swimming speed. At the DM's option, climbing a slippery vertical surface or one with few handholds requires a successful Strength (Athletics) check. Similarly, gaining any distance in rough water might require a successful Strength (Athletics) check.</p></div><hr class="section-break"><div class=" statsBlockSectionHead"><span class="entry-title" data-title-index="599">Difficult Terrain</span> <p>The travel speeds given in the Travel Pace table assume relatively simple terrain: roads, open plains, or clear dungeon corridors. But adventurers often face dense forests, deep swamps, rubble-filled ruins, steep mountains, and ice-covered ground—all considered difficult terrain.</p><p>You move at half speed in difficult terrain—moving 1 foot in difficult terrain costs 2 feet of speed—so you can cover only half the normal distance in a minute, an hour, or a day.</p></div><hr class="section-break"><div class=" statsBlockSectionHead"><span class="entry-title" data-title-index="600">Jumping</span> <p>Your Strength determines how far you can jump.</p><div class=" statsBlockHead"><span class="entry-title" data-title-index="601">Long Jump</span> <p> When you make a long jump, you cover a number of feet up to your Strength score if you move at least 10 feet on foot immediately before the jump. When you make a standing long jump, you can leap only half that distance. Either way, each foot you clear on the jump costs a foot of movement.</p><p>This rule assumes that the height of your jump doesn't matter, such as a jump across a stream or chasm. At your DM's option, you must succeed on a DC 10 Strength (Athletics) check to clear a low obstacle (no taller than a quarter of the jump's distance), such as a hedge or low wall. Otherwise, you hit it.</p><p>When you land in difficult terrain, you must succeed on a DC 10 Dexterity (Acrobatics) check to land on your feet. Otherwise, you land prone.</p></div><div class=" statsBlockHead"><span class="entry-title" data-title-index="602">High Jump</span> <p> When you make a high jump, you leap into the air a number of feet equal to 3 + your Strength modifier if you move at least 10 feet on foot immediately before the jump. After applying your Strength modifier, a high jump is a minimum of 0 feet. When you make a standing high jump, you can jump only half that distance. Either way, each foot you clear on the jump costs a foot of movement. In some circumstances, your DM might allow you to make a Strength (Athletics) check to jump higher than you normally can.</p><p>You can extend your arms half your height above yourself during the jump. Thus, you can reach above you a difference equal to the height of the jump plus 1 1/2 times your height.</p></div></div><hr class="section-break"><div class=" statsBlockSectionHead"><span class="entry-title" data-title-index="603">Travel Pace</span> <p>While traveling, a group of adventurers can move at a normal, fast, or slow pace, as shown on the Travel Pace table. The table states how far the party can move in a period of time and whether the pace has any effect. A fast pace makes characters less perceptive, while a slow pace makes it possible to sneak around and to search an area more carefully (see the "Activity While Traveling" section later in this chapter for more information).</p><div class=" statsBlockHead"><span class="entry-title" data-title-index="604">Forced March</span> <p> The Travel Pace table assumes that characters travel for 8 hours in day. They can push on beyond that limit, at the risk of exhaustion.</p></div><p>For each additional hour of travel beyond 8 hours, the characters cover the distance shown in the Hour column for their pace, and each character must make a Constitution saving throw at the end of the hour. The DC is 10 + 1 for each hour past 8 hours. On a failed saving throw, a character suffers one level of exhaustion (see the appendix).</p><div class=" statsBlockHead"><span class="entry-title" data-title-index="605">Mounts and Vehicles</span> <p> For short spans of time (up to an hour), many animals move much faster than humanoids. A mounted character can ride at a gallop for about an hour, covering twice the usual distance for a fast pace. If fresh mounts are available every 8 to 10 miles, characters can cover larger distances at this pace, but this is very rare except in densely populated areas.</p><p>Characters in wagons, carriages, or other land vehicles choose a pace as normal. Characters in a waterborne vessel are limited to the speed of the vessel (see chapter 5), and they don't suffer penalties for a fast pace or gain benefits from a slow pace. Depending on the vessel and the size of the crew, ships might be able to travel for up to 24 hours per day.</p><p>Certain special mounts, such as a pegasus or griffon, or special vehicles, such as a carpet of flying, allow you to travel more swiftly. The Dungeon Master's Guide contains more information on special methods of travel.</p></div><table class="striped-odd"><caption>Travel Pace</caption><thead><tr><th class="col-xs-2">Pace</th><th class="col-xs-2">Distance Traveled per Minute</th><th class="col-xs-2">Distance Traveled per Hour</th><th class="col-xs-2">Distance Traveled per Day</th><th class="col-xs-4">Effect</th></tr></thead><tbody><tr><td class="col-xs-2">Fast</td><td class="col-xs-2">400 feet</td><td class="col-xs-2">4 miles</td><td class="col-xs-2">30 miles</td><td class="col-xs-4">-5 penalty to passive Wisdom (Perception) scores</td></tr><tr><td class="col-xs-2">Normal</td><td class="col-xs-2">300 feet</td><td class="col-xs-2">3 miles</td><td class="col-xs-2">24 miles</td><td class="col-xs-4">-</td></tr><tr><td class="col-xs-2">Slow</td><td class="col-xs-2">200 feet</td><td class="col-xs-2">2 miles</td><td class="col-xs-2">18 miles</td><td class="col-xs-4">Able to use stealth</td></tr></tbody></table></div></div></td></tr><tr><th class="border" colspan="6"></th></tr></table>
-	</div>
-</div>
+<main class="container">
+<section id="climbing">
+	<h2>Climbing, Swimming, and Crawling</h2>
+	<p>While climbing or swimming, each foot of movement costs 1 extra foot (2 extra feet in difficult terrain), unless a creature has a climbing or swimming speed. At the DM's option, climbing a slippery vertical surface or one with few handholds requires a successful Strength (Athletics) check. Similarly, gaining any distance in rough water might require a successful Strength (Athletics) check.</p>
+</section>
+
+<hr class="section-break"/>
+
+<section id="difficult">
+	<h2>Difficult Terrain</h2>
+	<p>The travel speeds given in the Travel Pace table assume relatively simple terrain: roads, open plains, or clear dungeon corridors. But adventurers often face dense forests, deep swamps, rubble-filled ruins, steep mountains, and ice-covered ground—all considered difficult terrain.</p>
+	<p>You move at half speed in difficult terrain—moving 1 foot in difficult terrain costs 2 feet of speed—so you can cover only half the normal distance in a minute, an hour, or a day.</p>
+</section>
+
+<hr class="section-break"/>
+
+<section id="jumping">
+	<h2>Jumping</h2>
+	<p>Your Strength determines how far you can jump.</p>
+
+	<h3>Long Jump</h3>
+	<p>When you make a long jump, you cover a number of feet up to your Strength score if you move at least 10 feet on foot immediately before the jump. When you make a standing long jump, you can leap only half that distance. Either way, each foot you clear on the jump costs a foot of movement.</p>
+	<p>This rule assumes that the height of your jump doesn't matter, such as a jump across a stream or chasm. At your <abbr title="Dungeon Master">DM</abbr>'s option, you must succeed on a <abbr title="Difficulty Class">DC</abbr> 10 Strength (Athletics) check to clear a low obstacle (no taller than a quarter of the jump's distance), such as a hedge or low wall. Otherwise, you hit it.</p>
+	<p>When you land in difficult terrain, you must succeed on a <abbr title="Difficulty Class">DC</abbr> 10 Dexterity (Acrobatics) check to land on your feet. Otherwise, you land prone.</p>
+
+	<hr/>
+
+	<h3>High Jump</h3>
+	<p>When you make a high jump, you leap into the air a number of feet equal to 3 + your Strength modifier if you move at least 10 feet on foot immediately before the jump. After applying your Strength modifier, a high jump is a minimum of 0 feet. When you make a standing high jump, you can jump only half that distance. Either way, each foot you clear on the jump costs a foot of movement. In some circumstances, your <abbr title="Dungeon Master">DM</abbr> might allow you to make a Strength (Athletics) check to jump higher than you normally can.</p>
+	<p>You can extend your arms half your height above yourself during the jump. Thus, you can reach above you a difference equal to the height of the jump plus 1 1/2 times your height.</p>
+</section>
+
+<hr class="section-break">
+
+<section id="pace">
+	<h2>Travel Pace</h2>
+	<p>While traveling, a group of adventurers can move at a normal, fast, or slow pace, as shown on the Travel Pace table. The table states how far the party can move in a period of time and whether the pace has any effect. A fast pace makes characters less perceptive, while a slow pace makes it possible to sneak around and to search an area more carefully (see the "Activity While Traveling" section later in this chapter for more information).</p>
+
+	<h3>Forced March</h3>
+	<p>The Travel Pace table assumes that characters travel for 8 hours in day. They can push on beyond that limit, at the risk of exhaustion.</p>
+	<p>For each additional hour of travel beyond 8 hours, the characters cover the distance shown in the Hour column for their pace, and each character must make a Constitution saving throw at the end of the hour. The <abbr title="Difficulty Class">DC</abbr> is 10 + 1 for each hour past 8 hours. On a failed saving throw, a character suffers one level of exhaustion (see the appendix).</p>
+
+	<h2>Mounts and Vehicles</h2>
+	<p>For short spans of time (up to an hour), many animals move much faster than humanoids. A mounted character can ride at a gallop for about an hour, covering twice the usual distance for a fast pace. If fresh mounts are available every 8 to 10 miles, characters can cover larger distances at this pace, but this is very rare except in densely populated areas.</p>
+	<p>Characters in wagons, carriages, or other land vehicles choose a pace as normal. Characters in a waterborne vessel are limited to the speed of the vessel (see chapter 5), and they don't suffer penalties for a fast pace or gain benefits from a slow pace. Depending on the vessel and the size of the crew, ships might be able to travel for up to 24 hours per day.</p>
+	<p>Certain special mounts, such as a pegasus or griffon, or special vehicles, such as a carpet of flying, allow you to travel more swiftly. The Dungeon Master's Guide contains more information on special methods of travel.</p>
+
+	<table class="striped-odd">
+		<caption>Travel Pace</caption>
+		<thead>
+			<tr>
+				<th>Pace</th>
+				<th>Distance Traveled per Minute</th>
+				<th>Distance Traveled per Hour</th>
+				<th>Distance Traveled per Day</th>
+				<th>Effect</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Fast</td>
+				<td>400 feet</td>
+				<td>4 miles</td>
+				<td>30 miles</td>
+				<td>-5 penalty to passive Wisdom (Perception) scores</td>
+			</tr>
+			<tr>
+				<td>Normal</td>
+				<td>300 feet</td>
+				<td>3 miles</td>
+				<td>24 miles</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>Slow</td>
+				<td>200 feet</td>
+				<td>2 miles</td>
+				<td>18 miles</td>
+				<td>Able to use stealth</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+</main>
 </body>
 </html>
