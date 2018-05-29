@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS variants;
+CREATE TABLE variants (title varchar(40) primary key, source varchar(3), contents text);
+
+CREATE TABLE IF NOT EXISTS sources (abbreviation varchar(3) primary key, full_name varchar(40), red int, green int, blue int);
+INSERT INTO sources VALUES ('PHB', 'Player\'s Handbook', 74, 104, 152) ON CONFLICT DO NOTHING;
+INSERT INTO sources VALUES ('XGE', 'Xanathar\'s Guide to Everything', 186, 124, 0) ON CONFLICT DO NOTHING;
+INSERT INTO sources VALUES ('DMG', 'Dungeon Master\'s Guide', 128, 0, 128) ON CONFLICT DO NOTHING;
