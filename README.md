@@ -30,19 +30,15 @@ You can convert stat blocks to JSON for importing via [this converter](converter
 - Use tabs over spaces.
 
 ### JSON Cleaning
-#### Trailing commas
-To remove trailing commas in JSON:
+#### Trailing Commas
+Don't leave commas at the end of objects/arrays - they don't serve any purpose and merely make the file bigger than it needs to be.
 
-Find: (.*?)(,)(:?\s*]|\s*})
-
-Replace: $1$3
-
-#### Character replacement
+#### Character Set
+- Use UTF-8 encoding
 - ’ should be replaced with '
 - “ and ” should be replaced with "
 - — (em dash) should be replaced with \u2014 (Unicode for em dash)
 - – and \u2013 (en dash) should be replaced with \u2014
-- • should be not be used unless the JSON in question is not yet covered by the entryRenderer, i.e. should be encoded as a list
 - the only Unicode escape sequence allowed is \u2014; all other characters (unless noted above) should be stored as-is
 
 #### Convention for dashes
