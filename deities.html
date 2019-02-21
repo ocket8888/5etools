@@ -4,91 +4,273 @@
 <head>
 	<!--5ETOOLS_VERSION-->
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Deities - 5etools</title>
 
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="favicon.png">
 
-	<script type="text/javascript" src="lib/js-cookie.js"></script>
-	<script type="text/javascript" src="js/styleswitch.js"></script>
-	<script type="text/javascript" src="js/navigation.js"></script>
+<!-- 	<script type="text/javascript" src="lib/js-cookie.js"></script>
+ -->	<script type="text/javascript" src="js/styleswitch.js"></script>
+	<!-- <script type="text/javascript" src="js/navigation.js"></script> -->
+	<style type="text/css">
+		div#tablesearch {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 10px;
+			margin-top: 10px;
+		}
+		table {
+			background-color: white;
+			border-collapse: collapse;
+		}
+		tbody td:first-child {
+			text-align: left;
+		}
+		tbody tr {
+			border-top: 2px solid #ccc;
+		}
+		td {
+			text-align: center;
+			padding: 4px;
+		}
+		th {
+			padding: 4px;
+		}
+		input#search {
+			float: left;
+			padding: 6px 12px;
+			font: inherit;
+			border: 1px solid #ccc;
+			border-radius: 4px 0 0 4px;
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+			transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+			flex: 1;
+		}
+		button#reset {
+			border: 1px solid #ccc;
+    		border-left-width: 1px;
+			border-radius: 0 4px 4px 0;
+			border-left-width: 0;
+			display: inline-block;
+			padding: 8px 12px;
+			text-align: center;
+			vertical-align: middle;
+			background-color: white;
+			flex: 0;
+		}
+	</style>
 </head>
 
 <body>
-<div class="viewport-wrapper">
-	<header class="hidden-xs hidden-sm">
-		<div class="container">
-
-			<h1>Deities</h1>
-			<p>Search by name on the left, click deity name to display on the right.</p>
-		</div>
-	</header>
-	<nav class="container" id="navigation">
-		<ul class="nav nav-pills" id="navbar">
-		</ul>
-	</nav>
-
-	<div class="container view-col-wrapper">
-		<div class="view-col" id="listcontainer" style="flex: 6;">
-			<div class="input-group" id="filter-search-input-group">
-				<input type="search" id="search" class="search form-control" placeholder="Find deities...">
-				<span class="input-group-btn"><button class="btn btn-default" type="button"
-													  id="reset">Reset</button></span>
-			</div>
-			<div id="filtertools" class="sortlabel btn-group">
-				<button class="col-xs-3 sort btn btn-default btn-xs" type="button" data-sort="name">Name</button>
-				<button class="col-xs-2 sort btn btn-default btn-xs" type="button" data-sort="pantheon">Pantheon</button>
-				<button class="col-xs-2 sort btn btn-default btn-xs" type="button" data-sort="alignment">Alignment</button>
-				<button class="col-xs-3 sort btn btn-default btn-xs" type="button" data-sort="domains">Domains</button>
-				<button class="col-xs-2 sort btn btn-default btn-xs" type="button" data-sort="source">Source</button>
-			</div>
-
-			<ul id="deitiesList" class="list deities">
-				<!-- populated by javascript -->
-			</ul>
-		</div>
-
-		<div id="contentwrapper" class="view-col" style="flex: 4;">
-			<div id="sublistcontainer">
-				<div id="sublistsort" class="sortlabel btn-group">
-					<button class="col-xs-4 sort btn btn-default btn-xs" data-sort="name">Name</button>
-					<button class="col-xs-2 sort btn btn-default btn-xs" data-sort="pantheon">Pantheon</button>
-					<button class="col-xs-2 sort btn btn-default btn-xs" data-sort="alignment">Alignment</button>
-					<button class="col-xs-4 sort btn btn-default btn-xs" data-sort="domains">Domains</button>
-				</div>
-				<ul class="list subdeities">
-					<!-- populate with JS -->
-				</ul>
-			</div>
-
-			<div class="wrp-stat-tab">
-				<div id="tabs-right"></div>
-			</div>
-
-			<table id="pagecontent" class="stats">
-
-			</table>
-			<br>
-			<p class="text-align-center">
-				<button class="btn btn-default btn-sm btn-file" id="manage-brew">Manage Homebrew</button>
-			</p>
-		</div>
+<header>
+	<div class="container">
+		<h1 class="header-tools">Dieties</h1>
+		<p>Search by name on the left, click deity name to display on the right.</p>
 	</div>
-</div>    <!--5ETOOLS_SCRIPT_ANCHOR-->
-<script type="text/javascript" src="lib/jquery.js"></script>
-<script type="text/javascript" src="js/utils.js"></script>
+</header>
+<nav class="container">
+	<div>
+		<a href="5etools.html">Home</a>
+	</div>
+
+	<div class="dropdown">
+		<a href="quickreference1.html">Rules <span class="caret"></span></a>
+			<menu>
+				<li>
+					<a href="quickreference1.html">Quick Reference</a>
+				</li>
+
+				<li>
+					<a href="variantrules.html">Variant Rules</a>
+				</li>
+				<hr/>
+				<li>
+					<a href="book.html#dmg">Dungeon Master's Guide</a>
+				</li>
+
+				<li>
+					<a href="book.html#mm">Monster Manual</a>
+				</li>
+
+				<li>
+					<a href="book.html#phb">Player's Handbook</a>
+				</li>
+			</menu>
+	</div>
+
+	<div class="dropdown">
+		<a href="classes.html">Player Options <span class="caret"></span></a>
+		<menu>
+			<li>
+				<a href="classes.html">Classes</a>
+			</li>
+
+			<li>
+				<a href="backgrounds.html">Backgrounds</a>
+			</li>
+
+			<li>
+				<a href="feats.html">Feats</a>
+			</li>
+
+			<li>
+				<a href="invocations.html">Invocations</a>
+			</li>
+
+			<li>
+				<a href="races.html">Races</a>
+			</li>
+
+			<li>
+				<a href="lifegen.html">This Is Your Life</a>
+			</li>
+
+			<li>
+				<a href="names.html">Names</a>
+			</li>
+		</menu>
+	</div>
+
+	<div class="dropdown">
+		<a href="adventures.html">DM Tools <span class="caret"></span></a>
+		<menu>
+			<li>
+				<a href="adventures.html">Adventures</a>
+			</li>
+
+			<li>
+				<a href="crcalculator.html">CR Calculator</a>
+			</li>
+
+			<li>
+				<a href="cultsboons.html">Cults &amp; Demonic Boons</a>
+			</li>
+
+			<li>
+				<a href="https://kobold.club" target="_blank" title="We could literally never build something better than Kobold Fight Club" class="dropdown-ext-link">
+					<span>Encounter Builder</span>
+					<span class="glyphicon glyphicon-log-out"></span>
+				</a>
+			</li>
+
+			<li>
+				<a href="encountergen.html">Encounter Generator</a>
+			</li>
+
+			<li>
+				<a href="lootgen.html">Loot Generator</a>
+			</li>
+
+			<li>
+				<a href="objects.html">Objects</a>
+			</li>
+
+			<li>
+				<a href="trapshazards.html">Traps &amp; Hazards</a>
+			</li>
+		</menu>
+	</div>
+
+	<div class="dropdown">
+		<a href="spells.html">References <span class="caret"></span></a>
+		<menu>
+			<li>
+				<a href="bestiary.html">Bestiary</a>
+			</li>
+
+			<li>
+				<a href="conditions.html">Conditions</a>
+			</li>
+
+			<li>
+				<a href="deities.html">Deities</a>
+			</li>
+
+			<li>
+				<a href="items.html">Items</a>
+			</li>
+
+			<li>
+				<a href="rewards.html">Other Rewards</a>
+			</li>
+
+			<li>
+				<a href="psionics.html">Psionics</a>
+			</li>
+
+			<li>
+				<a href="spells.html">Spells</a>
+			</li>
+		</menu>
+	</div>
+
+	<div>
+		<a href="statgen.html">Statgen</a>
+	</div>
+
+	<div class="dropdown">
+		<a href="#" >Utilities <span class="caret"></span></a>
+			<menu>
+				<li>
+					<a href="converter.html">Stat Block to JSON</a>
+				</li>
+
+				<li>
+					<a href="demo.html">Renderer Demo</a>
+				</li>
+
+				<li>
+					<a href="roll20.html">Roll20 Script Help</a>
+				</li>
+			</menu>
+	</div>
+	<div>
+		<a href="#" id="nightmodeButton" onclick="switchModes()">Day Mode</a>
+	</div>
+
+	<div style="flex: 4;">
+		<input id="omnisearch-input" placeholder="Search everywhere..." title="Disclaimer: unlikely to search everywhere. Use with caution. NOT IMPLEMENTED">
+		<button id="omnisearch-submit">
+			<span></span>
+		</button>
+	</div>
+	<div id="omnisearch-output-wrapper" style="display: none;">
+		<div id="omnisearch-output"></div>
+	</div>
+</nav>
+
+<div class="container" style="margin-top: 5px;">
+	<div style="width: 100%; display: inline-flex;">
+		<input type="search" id="search" placeholder="Find deities...">
+		<button type="button" id="reset">Reset</button>
+	</div>
+	<div id="tablesearch">
+	<table>
+		<thead>
+			<tr>
+				<th style="text-align: left;">Name</th>
+				<th>Pantheon</th>
+				<th>Alignment</th>
+				<th>Title(s)</th>
+				<th>Source</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{deities}}
+		</tbody>
+	</table>
+
+	<p class="text-align-center">
+		<button class="btn btn-default btn-sm btn-file" id="manage-brew">Manage Homebrew</button>
+	</p>
+	</div>
+</div>
 <script type="text/javascript" src="js/omnisearch.js"></script>
-<script type="text/javascript" src="js/filter.js"></script>
-<script type="text/javascript" src="js/history.js"></script>
-<script type="text/javascript" src="js/entryrender.js"></script>
 <script type="text/javascript" src="js/deities.js"></script>
-<script type="text/javascript" src="lib/list.js"></script>
-<script type="text/javascript" src="lib/bootstrap.js"></script>
-<script type="text/javascript" src="lib/elasticlunr.js"></script>
 
 </body>
 
